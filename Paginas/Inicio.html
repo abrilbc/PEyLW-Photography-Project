@@ -5,24 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gustavo Celayes</title>
     <link rel="stylesheet" href="../Estilos/style.css">
+    <link rel="icon" href="../Imagenes/Icons/blackicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="../JavaScript/main.js"></script>
 </head>
-<body>
-    <div class="header">
-        <div class="contenedor-logo">
-            <a href="../Paginas/Inicio.html">
-                <img src="../Imagenes/Minimalist Modern Kalligraphie Logo Design - WHITE.png" alt="">
-            </a>
-        </div>
-        <div class="nav">
-            <a href="../Paginas/Inicio.html">INICIO</a>
-            <a href="../Paginas/Galeria.html">Galer&iacute;a</a>
-            <a href="../Paginas/Portafolio.html">Portafolio</a>
-            <a href="../Paginas/Contacto.html">Contacto</a>
-            <a href="../Paginas/SobreElAutor.html">Sobre el Autor</a>
-        </div>
+<body onload="cambioBackground()">
+    <div class="background main-background" id="background">
     </div>
-    <div>
-        Imagenes
+    <nav class="navbar">
+        <ul id="lista-nav">
+            <li class="nav-text"><a>GALER&Iacute;A</a></li>
+            <li class="nav-text"><a href="">SERVICIOS</a></li>
+            <li class="nav-text"><a href="Portafolio.html">PORTFOLIO</a></li>
+            <li class="nav-text"><a href="">EVENTOS</a></li>
+        </ul>
+    </nav>
+    <div class="presentacion">
+        <div id="container">
+            <div id="portrait"></div>
+            <div class="text-present">
+                 <h2>¡Hola!</h2><h2>Soy Gustavo, un fot&oacute;grafo de <br> San Patricio del Chañar, Neuqu&eacute;n</h2>
+                <p>Bienvenidos a mi rinc&oacute;n en la web. Soy Gustavo, un fot&oacute;grafo apasionado por capturar los momentos m&aacute;s significativos y la esencia de las culturas que nos rodean. </p>
+            </div>
+            <button><a href="Biografia.html">M&aacute;s Informaci&oacute;n</a></button>
+        </div>
     </div>
 </body>
 </html>

@@ -1,0 +1,243 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    color: black;
+    background-color: whitesmoke;
+    font-family: 'Jost', 'sans-serif';
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+}
+
+p {
+    font-size: 19px;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    font-family: 'Jost';
+}
+
+a:active {
+    color: brown;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    width: 102%;
+    height: 7em;
+    font-size: 1.02em;
+    display: flex;
+    align-items: center;
+    background-color: whitesmoke;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#logo {
+    margin-left: 2em;
+    background: url(../Imagenes/Logos/LogoGC_long.png) no-repeat center center;
+    background-size: contain;
+    width: 18em;
+    height: 8em;
+}
+
+.navbar #links {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: calc(100% - 20em); /* Ajuste para el logo */
+    height: 100%;
+}
+
+.navbar #lista-nav {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-text a:hover {
+    border: 0;
+    font-size: 1.2em;
+    color: rgba(6, 6, 194, 0.738);
+    transition: 0.5s;
+}
+
+.nav-text a:not(:hover) {
+    transition: 0.5s;
+}
+
+#body-box {
+    display: flex;
+    padding: 20px;
+    width: 100%;
+}
+
+#ranking-box {
+    width: 20em;
+    display: flex;
+    justify-content: center;
+}
+
+#ranking {
+    position: sticky;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    text-align: center;
+    height: 42em;
+    width: 18em;
+    top: 9em;
+    padding: 10px;
+    background-color: rgba(8, 47, 137, 0.099);
+}
+
+#ranking h2 {
+    margin: 2px;
+}
+
+.contenedor-ranking {
+    background-color: rgba(2, 44, 84, 0.225);
+    border: 1px solid rgba(0, 0, 0, 0.589);
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+    margin-top: 20px;
+    position: relative;
+    width: 95%;
+    height: 14%;
+}
+
+.contenedor-ranking:hover {
+    cursor: default;
+}
+
+.contenedor-ranking img {
+    width: 100%;
+    height: 72%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.contenedor-ranking img:hover {
+    cursor: pointer;
+}
+
+.contenedor-ranking h3 {
+    margin: 0;
+}
+
+#galeria {
+    flex-grow: 1;
+    margin-left: 20px;
+}
+
+#filtro {
+    width: 95%;
+}
+
+#lista-filtro {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    padding-left: 0;
+    font-size: 13px;
+}
+
+#lista-filtro span {
+    font-size: 13px;
+    font-weight: 500;
+    cursor: default;
+}
+
+#lista-filtro li {
+    font-size: 13px;
+    padding: 0.1em 2em;
+    text-align: center;
+    border-radius: 10px;
+}
+
+#lista-filtro li:hover {
+    font-size: 13.5px;
+    cursor: pointer;
+    background-color: rgba(1, 14, 255, 0.074);
+    transition: 0.5s;
+}
+
+#lista-filtro li:not(:hover) {
+    transition: 0.5s;
+}
+
+#img-box {
+    position: relative;
+    width: 95%;
+    height: max-content;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 20px;
+}
+
+.imagen {
+    position: relative;
+    width: 20em;
+    height: 20em;
+    overflow: hidden;
+}
+
+.imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    object-position: center;
+    border-radius: 10px;
+}
+
+.imagen img:hover {
+    cursor: pointer;
+    transition: 0.8s;
+    transform: scale(0.8) rotate(10deg);
+}
+
+.imagen img:not(:hover) {
+    transition: 0.8s;
+}
+
+.activo {
+    font-size: 18px;
+    font-weight: bold;
+    color: rgba(0, 0, 255, 0.584);
+    background-color: rgba(1, 14, 255, 0.074);
+}
+
+.boton-mg {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: rgba(226, 14, 14, 0.7);
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    font-size: 14px;
+}
+.boton-mg:hover {
+    background-color: rgb(226, 14, 14);
+    font-size: 15px;
+    transition: 0.5s;
+}
+
+.boton-mg:not(:hover) {
+    transition: 0.5s;
+}
+
+/* PARA QUE NO LE AFECTE EL TRANSFORM DE IMG */
+.boton-mg img:hover {
+    transform: none;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cont&aacute;ctame</title>
+    <link rel="stylesheet" href="../Estilos/form.css">
+    <link rel="icon" href="../Imagenes/Icons/blackicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body onload="getFechaActual()">
+    <div id="formulario">
+        <div class="fondo-form">
+            <div class="logo">
+            </div>
+            <div id="socials">
+                <ul>
+                    <li class="sm-icon"><a href="https://www.instagram.com/votagus10/"><img src="../Imagenes/Icons/instagram.png" alt="instagram"></a></li>
+                    <li class="sm-icon"><a href="https://www.facebook.com/elshibumi"><img src="../Imagenes/Icons/facebook.png" alt=""></a></li>
+                </ul>
+            </div>
+            <a href="#title" id="ancla">COMPLETAR FORMULARIO</a>
+            <div class="img-container">
+            </div>
+            <div class="form-container">
+                <div id="title">
+                    <h1>CONTACTAME</h1>
+                    <h3>Llena este formulario y me llegará un mail con lo ingresado. <br> Me aseguraré de responderte lo antes posible.</h3>
+                </div>
+                <hr>
+                <div class="input-area">
+                    <div id="data">
+                        <form action="" id="elFormulario">
+                            <label>Nombre Completo * <br> <input type="text" id="nombre" autocomplete="off" placeholder="Ingrese su nombre"></label>
+                            <label>Correo Electr&oacute;nico * <br> <input type="text" id="email" autocomplete="off" placeholder="tucorrreo@electronico.com"></label>
+                            <label>Lugar preferido para las fotos * <br> <input type="text" id="lugar" autocomplete="off" placeholder="ej. Plaza de las banderas"></label>
+                            <label>¿Qu&eacute; te interesa capturar? * <br>
+                                <select name="tipo_proyecto" id="selectProyecto">
+                                    <option value=""></option>
+                                    <option value="retrato">Retratos</option>
+                                    <option value="exposicion">Exposici&oacute;n</option>
+                                    <option value="evento">Evento</option>
+                                    <option value="boda">Boda</option>
+                                    <option value="comunion">Comuni&oacute;n</option>
+                                </select>
+                            </label>
+                            <label>Fecha pensada * <span class="warnings">(no debe sobrepasar los dos años)</span><br><input type="date" id="fecha"></label>
+                            <label for="comentarios">Comentarios</label><textarea name="" id=""></textarea>
+                            <input type="submit" value="ENVIAR" id="submitBtn" onclick="validar_formulario()">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../JavaScript/main.js"></script>
+</body>
+</html>

@@ -3,21 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gustavo Celayes</title>
-    <link rel="stylesheet" href="../Estilos/style.css">
+    <title>Galería</title>
+    <link rel="stylesheet" href="../Estilos/Galeria.css">
+    <link rel="icon" href="../Imagenes/Icons/blackicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="header">
-        <a href="../Paginas/Inicio.html">
-            <img src="../Imagenes/Minimalist Modern Kalligraphie Logo Design - WHITE.png" alt="">
-        </a>
-        <div class="nav">
-            <a href="../Paginas/Inicio.html">INICIO</a>
-            <a href="../Paginas/Galeria.html">Galería</a>
-            <a href="../Paginas/Portafolio.html">Portafolio</a>
-            <a href="../Paginas/Contacto.html">Contacto</a>
-            <a href="../Paginas/SobreElAutor.html">Sobre el Autor</a>
+    <nav class="navbar">
+        <div id="logo"></div>
+        <div id="links">
+            <ul id="lista-nav">
+                <li class="nav-text"><a href="Galeria.html">GALER&Iacute;A</a></li>
+                <li class="nav-text"><a href="">SERVICIOS</a></li>
+                <li class="nav-text"><a href="Inicio.html">INICIO</a></li>
+                <li class="nav-text"><a href="Portafolio.html">PORTFOLIO</a></li>
+                <li class="nav-text"><a href="Eventos.html">EVENTOS</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div id="body-box">
+        <div id="ranking-box">
+            <div id="ranking">
+            </div>
+        </div>
+        <div id="galeria">
+            <nav id="filtro">
+                <ul id="lista-filtro">
+                    <span>Filtrar por categor&iacute;a:</span>
+                    <li id="todas" onclick="filtrarImagenes('todas')">Todas</li>
+                    <li id="boda" onclick="filtrarImagenes('boda')">Casamientos</li>
+                    <li id="retrato" onclick="filtrarImagenes('retrato')">Retratos</li>
+                    <li id="street" onclick="filtrarImagenes('street')">Street</li>
+                    <li id="newborn" onclick="filtrarImagenes('newborn')">Recien Nacidos</li>
+                    <li id="naturaleza" onclick="filtrarImagenes('naturaleza')">Naturaleza</li>
+                </ul>
+            </nav>
+            <div id="img-box">
+            </div>
         </div>
     </div>
+    <script src="../JavaScript/galeria.js"></script>
 </body>
 </html>
