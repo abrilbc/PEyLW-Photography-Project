@@ -20,10 +20,6 @@ a {
     font-family: 'Jost';
 }
 
-a:active {
-    color: brown;
-}
-
 .navbar {
     position: sticky;
     top: 0;
@@ -240,4 +236,27 @@ a:active {
 /* PARA QUE NO LE AFECTE EL TRANSFORM DE IMG */
 .boton-mg img:hover {
     transform: none;
+}
+
+.like-text {
+    position: absolute;
+    left: -22px;
+    top: 5.5px;
+    padding-left : 5px;
+    padding-right : 5px;
+    font-size: 14px;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.386);
+    border-radius: 15px;
+}
+
+
+#footer {
+    top: 0;
+    height: 8em;
+    background-color: rgba(0, 0, 255, 0.178);
+}
+
+#ftr-texto {
+    padding: 2em;
 }

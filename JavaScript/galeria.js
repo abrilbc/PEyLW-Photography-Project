@@ -1,6 +1,5 @@
 const galeriaBox = document.getElementById('img-box')
 const ranking = document.getElementById('ranking');
-const mostrarRankingButton = document.getElementById('mostrarRanking');
 
 const arregloImagenes = [
     { id: 1, categoria: 'newborn', src: '../Imagenes/Galeria/RecienNacidos/newborn1.jpg', alt: 'Recien Nacido', mg: 0 },
@@ -56,6 +55,12 @@ const arregloImagenes = [
     { id: 51, categoria: 'retrato', src: '../Imagenes/Galeria/Retratos/retrato9.jpeg', alt: 'Retrato', mg: 0 },
 ]
 
+window.onload = function() {
+    cargarLikes();
+    mostrarImagenes(arregloImagenes)
+    mostrarRanking()
+}
+
 function mostrarImagenes(arreglo) {
     galeriaBox.innerHTML = ''
     arreglo.forEach(imagen => {
@@ -80,13 +85,19 @@ function mostrarImagenes(arreglo) {
         likeImg.src = '../Imagenes/Icons/Like/like.png'
         botonMG.classList.add('boton-mg')
 
+        /* TEXTO DE LIKES */
+        let likeTexto = document.createElement('span');
+        likeTexto.classList.add('like-text');
+        likeTexto.innerText = imagen.mg;
+
         botonMG.addEventListener('click', function() {
-            darLike(imagen.id);
+            darLike(imagen.id, likeTexto);
         });
 
         /* BOTON PARA MOSTRAR IMAGEN COMPLETA */
         div.appendChild(img)
         div.appendChild(botonMG)
+        botonMG.appendChild(likeTexto);
         botonMG.appendChild(likeImg)
         galeriaBox.appendChild(div)
     })
@@ -118,10 +129,11 @@ function guardarLikes() {
     localStorage.setItem('imagenes', JSON.stringify(arregloImagenes));
 }
 
-function darLike(id) {
+function darLike(id, textoLike) {
     for (let i = 0 ; i < arregloImagenes.length ; i++) {
         if (arregloImagenes[i].id === id) {
             arregloImagenes[i].mg += 1;
+            textoLike.innerText = arregloImagenes[i].mg;
             break;
         }
     }
@@ -139,11 +151,22 @@ function ordenarPorLikes() {
     return imagenesLocalStorage;
 }
 
+function cargarLikes() {
+    const likesGuardados = JSON.parse(localStorage.getItem('imagenes'));
+    if (likesGuardados) {
+        for (let i = 0; i < arregloImagenes.length; i++) {
+            const imgGuardada = likesGuardados.find(like => like.id === arregloImagenes[i].id);
+            if (imgGuardada) {
+                arregloImagenes[i].mg = imgGuardada.mg;
+            }
+        }
+    }
+}
+
 function mostrarRanking() {
     ranking.innerHTML = '<h2>LAS MAS LIKEADAS   </h2>';
     
     let arreglo_ordenadas = ordenarPorLikes()
-    console.log(arreglo_ordenadas)
     for (let i = 1 ; i <= 5 ; i++) {
         imagen = arreglo_ordenadas[i]
         idImg = imagen.id
@@ -165,10 +188,5 @@ function mostrarRanking() {
     }
 }
 
-
-window.onload = function() {
-    mostrarImagenes(arregloImagenes)
-    mostrarRanking()
-}
 
 

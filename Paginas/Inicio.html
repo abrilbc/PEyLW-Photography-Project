@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gustavo Celayes</title>
-    <link rel="stylesheet" href="../Estilos/style.css">
+    <link rel="stylesheet" href="../Estilos/Inicio.css">
     <link rel="icon" href="../Imagenes/Icons/blackicon.png">
     <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script src="../JavaScript/main.js"></script>
@@ -12,22 +12,32 @@
 <body onload="cambioBackground()">
     <div class="background main-background" id="background">
     </div>
-    <nav class="navbar">
-        <ul id="lista-nav">
-            <li class="nav-text"><a>GALER&Iacute;A</a></li>
-            <li class="nav-text"><a href="">SERVICIOS</a></li>
-            <li class="nav-text"><a href="Portafolio.html">PORTFOLIO</a></li>
-            <li class="nav-text"><a href="">EVENTOS</a></li>
-        </ul>
-    </nav>
-    <div class="presentacion">
+    <div class="container-all">
         <div id="container">
-            <div id="portrait"></div>
-            <div class="text-present">
-                 <h2>¡Hola!</h2><h2>Soy Gustavo, un fot&oacute;grafo de <br> San Patricio del Chañar, Neuqu&eacute;n</h2>
-                <p>Bienvenidos a mi rinc&oacute;n en la web. Soy Gustavo, un fot&oacute;grafo apasionado por capturar los momentos m&aacute;s significativos y la esencia de las culturas que nos rodean. </p>
+            <div id="logo-div">
+                <img src="../Imagenes/Logos/GCLogo.png" alt="">
             </div>
-            <button><a href="Biografia.html">M&aacute;s Informaci&oacute;n</a></button>
+            <div id="intro">
+                <div id="contenedor-imagen">
+                </div>
+                <div id="contenedor-texto">
+                    <span id="hola">¡Hola!</span><h3>Soy Gustavo, Fot&oacute;grafo de <br> San Patricio del Chañar, Neuqu&eacute;n</h3>
+                        <p>Bienvenidos a mi rinc&oacute;n en la web. Soy Gustavo, <br>
+                            un fot&oacute;grafo apasionado por capturar los momentos m&aacute;s significativos y
+                            la esencia de las culturas que nos rodean.
+                </div>
+            </div>
+            <div id="links">
+                <div id="row-1">
+                    <a href="../Paginas/Galeria.html">GALER&Iacute;A</a>
+                    <a href="../Paginas/Biografia.html">BIOGRAF&Iacute;A</a>
+                </div>
+                <div id="row-2">
+                    <a href="../Paginas/Formulario.html">CONTACTO</a>
+                    <a href="../Paginas/Momentos.html">PROYECTOS</a>
+                    <a href="../Paginas/Portfolio.html">PORTFOLIO</a>
+                </div>
+            </div>
         </div>
     </div>
 </body>

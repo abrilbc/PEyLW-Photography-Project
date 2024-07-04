@@ -45,9 +45,7 @@ function validar_formulario() {
     boolSelect = validarSelect()
 
     if (boolFecha && boolNombre && boolLugar && boolEmail && boolSelect) {
-        setTimeout(() => { alert('¡El registro de sus datos ha sido un éxito!') }, 100)
-
-            document.querySelector('elFormulario').reset()
+        setTimeout(() => { alert('¡Datos Valorados! Espere mi respuesta por mail') }, 100)
     }
 }
 

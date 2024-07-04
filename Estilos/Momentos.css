@@ -1,0 +1,240 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    color: black;
+    background-color: whitesmoke;
+    width: 100%;
+    font-family: 'Jost', 'sans-serif';
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    display: grid;
+    place-items: center;
+}
+
+p {
+    font-size: 19px;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    font-family: 'Jost';
+}
+
+h1 {
+    margin: 0;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    height: 7em;
+    font-size: 1.02em;
+    display: flex;
+    align-items: center;
+    background-color: whitesmoke;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#logo {
+    margin-left: 2em;
+    background: url(../Imagenes/Logos/LogoGC_long.png) no-repeat center center;
+    background-size: contain;
+    width: 18em;
+    height: 8em;
+}
+
+.navbar #links {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: calc(100% - 20em);
+    height: 100%;
+}
+
+.navbar #lista-nav {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-text a:hover {
+    border: 0;
+    font-size: 1.2em;
+    color: rgba(6, 6, 194, 0.738);
+    transition: 0.5s;
+}
+
+.nav-text a:not(:hover) {
+    transition: 0.5s;
+}
+
+#momentos {
+    position: relative;
+    top: 2em;
+    margin-bottom: 4em;
+    width: 100%;
+    height: 115em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#momentos #box-1, #box-2, #box-3, #box-4, #box-5 {
+    position: relative;
+    width: 90%;
+    height: 20em;
+    display: flex;
+    margin-top: 2em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.momento-img {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    width: 34em;
+    height: 20.19em;
+}
+
+.momento-texto {
+    border: 1px dashed black;
+    border-radius: 15px;
+    width: 62em;
+    height: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.momento-texto .texto {
+    margin-top: 1em;
+    margin-left: 2em;
+    width: 58em;
+    height: 95%;
+}
+
+.texto h2 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.texto p {
+font-size: 1.2em;
+}
+
+.img-carrousel {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+button {
+    position: absolute;
+    z-index: 9;
+    background: none;
+    border: none;
+    font-size: 1.1em;
+    font-weight: 700;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    border-radius: 15px;
+    background-color: rgba(245, 245, 245, 0.636);
+    top: 46%;
+}
+
+button:hover {
+    transition: 0.5s;
+    transform: scale(1.5);
+}
+
+button:not(:hover) {
+    transition: 0.5s;
+}
+
+.antes {
+    margin-left: 10px;
+}
+
+.despues {
+    right: 10px;
+}
+
+#ses-fotos {
+    position: relative;
+    width: 100%;
+    height: 55em;
+    display: flex;
+    flex-direction: column;
+    align-items:  center;
+}
+
+#galeria-s {
+    width: 80%;
+    height: 45%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+    gap: 50px;
+}
+
+.contenedor-img {
+    border: 2px solid rgba(255, 255, 255, 0.713);
+    border-radius: 15px;
+    position: relative;
+    width: 25em;
+    height: 20em;
+    overflow: hidden;
+    display: flex;
+    margin-top: 2em;
+    justify-content: space-between;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.545);
+}
+
+.textoDestacado {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    transition: 0.5s;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.contenedor-img:hover .textoDestacado {
+    opacity: 1;
+}
+
+.contenedor-img .sesion-img img:hover {
+    filter: brightness(50%);
+}
+
+.sesion-img {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    width: 38em;
+    height: 20.19em;
+    transition: 0.5s ease;
+}
+
+.textoOp {
+    color: white;
+    font-size: 1.5em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}

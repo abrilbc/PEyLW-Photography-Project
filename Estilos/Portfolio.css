@@ -1,0 +1,180 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    color: black;
+    background: none;
+    font-family: 'Jost', 'sans-serif';
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+}
+
+#background {
+    position: relative;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    background: url(../Imagenes/Galeria/butterfly1.jpg) no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    height: 45.9em;
+}
+
+p {
+    font-size: 20px;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    font-family: 'Jost';
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    width: 102%;
+    height: 7em;
+    font-size: 1.02em;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: whitesmoke;
+}
+
+#logo {
+    margin-left: 2em;
+    background: url(../Imagenes/Logos/LogoGC_long.png) no-repeat center center;
+    background-size: contain;
+    width: 18em;
+    height: 8em;
+}
+
+.navbar #links {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: calc(100% - 20em); /* Ajuste para el logo */
+    height: 100%;
+}
+
+.navbar #lista-nav {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-text a:hover {
+    border: 0;
+    font-size: 1.2em;
+    color: rgba(6, 6, 194, 0.738);
+    transition: 0.5s;
+}
+
+.nav-text a:not(:hover) {
+    transition: 0.5s;
+}
+
+.container-all {
+    top: 8em;
+    position: absolute;
+    right: 0;
+    margin-right: 5em;
+    width: 40em;
+    height: 90%;
+}
+
+#cont-nav {
+    top: 0;
+    text-align: right;
+    position: relative;
+    z-index: 9;
+    bottom: 2em;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+#cont-nav p{
+    margin-top: 2em;
+    color: whitesmoke;
+    font-size: 15px;
+}
+
+#cont-nav ul{
+    display: flex;
+    justify-content: space-between;
+    place-items: center;
+    padding-left: 0;
+    list-style-type: none;
+    width: 25em;
+    height: 10em;
+}
+
+#cont-nav ul li {
+    border: 1px solid black;
+    background-color: rgba(245, 245, 245, 0.691);
+    padding: 5px;
+    min-width: 9em;
+    text-align: center;
+    font-weight: 500;
+}
+
+#cont-nav ul li:hover{
+    cursor: pointer;
+    background-color: black;
+    border: 1px solid whitesmoke;
+}
+
+#cont-nav ul li:hover a {
+    color: whitesmoke;
+}
+
+#especializacion {
+    padding: 2em;
+    width: 100%;
+    height: 40em;
+}
+
+.esp-container {
+    margin-top: 2em;
+    display: flex;
+    width: 100%;
+    height: 15em;
+}
+
+.esp-container .img-esp {
+    border-radius: 20px;
+    overflow: hidden;
+    width: 35em;
+    height: 100%;
+}
+
+.img-esp img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.texto {
+    width: 50em;
+    height: 100%;
+    margin-left: 2em;
+}
+
+.texto p {
+    font-size: 18px;
+}
+
+.texto h1 {
+    margin: 0;
+    font-size: 14px;
+}

@@ -38,7 +38,7 @@ p {
     align-items: center;
 }
 
-.logo {
+#logo {
     margin-top: 40px;
     background: url(../Imagenes/Logos/GCLogo.png) no-repeat center center;
     background-size: contain;
